@@ -1,4 +1,6 @@
-import re
+# 굳이 list로 구성하지 않아도 된단 생각이 들었다
+# step2에서 not in 사용, step3에서 while문 사용 등등 다시 풀어보기
+import re 
 def solution(new_id):
     id = []
     answer = ''
@@ -7,6 +9,8 @@ def solution(new_id):
     id = list(new_id.lower())
     
     # step 2
+    # re 라이브러리를 사용했다가 실전에서는 사용하기 어려울 것 같다 생각
+    # 가독성을 위해 중첩 조건문으로 작성 - 연산자 주의하기 ! 
     for i in range(len(id)) : 
         q = ord(id[i])
         if (q < ord('a')) or (q > ord('z')) :
